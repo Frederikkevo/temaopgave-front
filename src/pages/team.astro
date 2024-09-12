@@ -1,8 +1,7 @@
 ---
-import EmployeeSection from "../components/EmployeeSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Circles from "../components/Circles.astro";
-import Hero from "../components/Hero.astro";
+import EmployeeSection from "../components/EmployeeSection.astro";
+import "../styles/global.css";
 const coreData = await fetch(
   "https://raw.githubusercontent.com/Frederikkevo/frontend-design/main/resources/json/corevalues.json"
 ).then((res) => res.json());
@@ -14,7 +13,6 @@ const employeeData = await fetch(
 ).then((res) => res.json());
 ---
 
-<BaseLayout title="Home">
-  <Hero />
-  <Circles />
+<BaseLayout>
+  <EmployeeSection data={employeeData} theme="dark" />
 </BaseLayout>

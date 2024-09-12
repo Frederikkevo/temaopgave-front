@@ -1,0 +1,101 @@
+---
+import "../styles/global.css";
+---
+
+<button class="login-btn" popovertarget="popup">Login</button>
+<div popover id="popup" class="login-box">
+  <h2>Dashboard Login</h2>
+  <form action="/Login">
+    <input type="text" placeholder="Enter Email" required />
+    <input type="password" placeholder="Enter Password" required />
+    <input
+      type="submit"
+      value="Go to dashboard"
+      id="Login"
+      class="submit-btn"
+    />
+  </form>
+</div>
+
+<style>
+  /* Styling for the login button */
+  .login-btn {
+    background-color: #f1c04d; /* Gule login-knap */
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .login-btn:hover {
+    background-color: #e0a73c; /* Let mørkere gul ved hover */
+  }
+
+  [popover]::backdrop {
+    background: #1c1c1cce;
+    backdrop-filter: blur(16px);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Styling for the login box */
+  .login-box {
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 999;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  /* Input fields styling */
+  .login-box input[type="text"],
+  .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Submit button styling */
+  .submit-btn {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #f5c542;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #e5b632;
+  }
+
+  /* Responsive design */
+  @media (max-width: 500px) {
+    .login-box {
+      width: 90%;
+    }
+  }
+</style>

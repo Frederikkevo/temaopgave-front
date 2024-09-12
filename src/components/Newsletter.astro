@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+---
+
+<footer class="subscribe-footer">
+  <div class="subscribe-content">
+    <div class="subscribe-text">
+      <h2>Subscribe Our Newsletter</h2>
+      <p>
+        Build stronger Customer Relationships with <strong>Consultalk</strong>
+      </p>
+    </div>
+    <form class="subscribe-form" action="#">
+      <input type="email" placeholder="your mail address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  <div class="subscribe-decoration"></div>
+</footer>
+
+<style>
+  .subscribe-footer {
+    background-color: #1c1c1c; /* Mørk baggrund som på billedet */
+    border-radius: 16px; /* Runde hjørner */
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+
+  .subscribe-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .subscribe-text h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  .subscribe-text p {
+    color: #b0b0b0;
+    margin-top: 0.5rem;
+  }
+
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .subscribe-form input {
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    border: none;
+    width: 300px;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .subscribe-form button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #f1c04d; /* Gul baggrund */
+    color: #1c1c1c;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-form button:hover {
+    background-color: #e5b632; /* Mørkere gul ved hover */
+  }
+
+  .subscribe-decoration {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url("/path/to/your/decoration-image.svg"); /* Dekorationsbilledet */
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 768px) {
+    .subscribe-footer {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    .subscribe-form {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .subscribe-form input {
+      width: 100%;
+    }
+
+    .subscribe-form button {
+      width: 100%;
+    }
+  }
+</style>

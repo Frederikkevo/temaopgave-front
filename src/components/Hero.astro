@@ -1,0 +1,231 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets"; // Importer Image-komponenten
+import sarahImg from "../assets/images/sarah.jpg"; // Dit profilbillede
+import workImg from "../assets/images/work-image.png"; // Billedet i "What To Expect" sektionen
+---
+
+<section class="hero-section">
+  <div class="grid-container">
+    <!-- Tekstsektion -->
+    <div class="text-section">
+      <h1 class="overskrift">Adam Buschemia<br />Business Consultant</h1>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <button class="cta-button">Book a Meeting</button>
+    </div>
+
+    <!-- Billedsektion -->
+    <div class="image-section">
+      <!-- Brug af Astro's Image-komponent -->
+      <Image src={sarahImg} alt="Adam Buschemia" class="consultant-img" />
+    </div>
+  </div>
+
+  <!-- Services sektion med grid -->
+  <div class="services-grid">
+    <div class="service-card">
+      <h2>Finance & Restructuring</h2>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <button class="service-button">Our Services</button>
+    </div>
+    <div class="service-card">
+      <h2>Our Approach</h2>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <button class="service-button">More About</button>
+    </div>
+    <div class="service-card">
+      <h2>Consultalk Result</h2>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <button class="service-button">Explore Our Solution</button>
+    </div>
+  </div>
+</section>
+
+<section class="what-to-expect-section">
+  <div class="expect-grid">
+    <!-- Billedsektion -->
+    <div class="expect-image">
+      <!-- Brug af Astro's Image-komponent -->
+      <Image src={workImg} alt="What To Expect" class="work-img" />
+    </div>
+
+    <!-- Tekstsektion -->
+    <div class="expect-text">
+      <span class="highlight">HOW WE WORK WITH YOU</span>
+      <h2>What To Expect</h2>
+      <p>
+        Get the help from Alex Moore, a professional business coach with
+        advanced experience on growth and business scaling. We ensure you get
+        the best insights and strategies for your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero-sektion */
+  .hero-section {
+    background-color: #1c1c1c;
+    color: white;
+    max-height: 70%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+  }
+
+  .overskrift {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    background-color: white;
+    color: #1c1c1c;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #f1c04d;
+  }
+
+  .image-section {
+    text-align: right;
+  }
+
+  .consultant-img {
+  }
+
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .service-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .service-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+
+  .service-button {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .service-button:hover {
+    background-color: #1c1c1c9a;
+  }
+
+  /* What to Expect sektion */
+  .what-to-expect-section {
+    padding: 40px;
+    background-color: white;
+    color: #1c1c1c;
+  }
+
+  .expect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .expect-image {
+    text-align: left;
+  }
+
+  .work-img {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .expect-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .highlight {
+    font-size: 0.9rem;
+    color: #f1c04d;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .expect-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .expect-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Responsivt design */
+  @media (max-width: 768px) {
+    .grid-container,
+    .expect-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .image-section,
+    .expect-image {
+      text-align: center;
+    }
+  }
+</style>
